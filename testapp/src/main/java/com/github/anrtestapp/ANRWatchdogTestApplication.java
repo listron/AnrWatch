@@ -22,6 +22,10 @@ public class ANRWatchdogTestApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
+        //统一注册异常捕获handler
+        UnCrashHandler unCrashHandler = UnCrashHandler.getInstance();
+        unCrashHandler.init(getApplicationContext());
+
         anrWatchDog.setANRListener(new ANRWatchDog.ANRListener() {
             @Override
             public void onAppNotResponding(ANRError error) {
@@ -87,6 +91,6 @@ public class ANRWatchdogTestApplication extends Application {
             }
         });
 
-        anrWatchDog.start();
+        //anrWatchDog.start();
     }
 }

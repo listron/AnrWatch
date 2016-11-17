@@ -66,9 +66,16 @@ public class MainActivity extends Activity {
 
         findViewById(R.id.simpleMain).setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                anrWatchDog.setReportMainThreadOnly();
-                anrWatchDog.setIgnoreDebugger(true);
-                SleepAMinute();
+//                anrWatchDog.setReportMainThreadOnly();
+//                anrWatchDog.setIgnoreDebugger(true);
+//                SleepAMinute();
+                //try {
+                    String aa = null;
+                    aa.toString();
+                //}catch (Exception e){
+                //    e.printStackTrace();
+                //}
+
             }
         });
 
